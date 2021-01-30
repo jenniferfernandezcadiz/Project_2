@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Comparison</title>
+</head>
+<body>
+<h1>Which Country are you traveling to today?</h1>
+<p>The pandemic has changed the way we look at travel, but there are some places that were still hot for the summer.</p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+<body>
+  <h2>2020 Country Chart</h2>
+  <p>In the summer of 2020 which is defined from June 1 2020 to August 31, 2020 American Airlines served 16 countries in the MCLA Region (Mexico, Caribbean, and Latin America).</p>
+  <p>There were multiple destinations served in each country, and the pie chart belows shows the percentage of flying from the 41 MCLA destinations served by each country.</p>
+  <canvas id="myChart1"></canvas>
+  <script>
+   var ctx = document.getElementById('myChart1').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['Mexico', 'Bahamas', 'Dominican Republic', 'Jamaica', 'Honduras', 'Aruba', 'Turks and Caicos', 'Sint Maarten', 'Ecuador', 'Brazil', 'Antigua & Babuda', 'Haiti', 'Chile', 'St. Lucia', 'St. Vincent & Grenadines', 'Costa Rica'],
+        datasets: [{
+            label: 'Percentage of MCLA Flying',
+            data: [56.3, 7.0, 5.6, 5.6, 2.7, 2.7, 2.7, 2.7, 2.7, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4, 1.4 ],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'
+                
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)'
+                
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+}); 
+
+
+  </script> src="script2.js"></script>
+</body>
+</html>
