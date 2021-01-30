@@ -23,6 +23,19 @@ engine=create_engine(db_path)
 def render_indexjf():
     return render_template('/indexjf.html')
 
+@app.route('/index3')
+def render_index3():
+    return render_template('/index3.html')
+
+@app.route('/index4')
+def render_index4():
+    return render_template('index4.html')
+
+@app.route('/index2')
+def render_index2():
+    return render_template('/index2.html')
+
+
 @app.route('/csv/read')
 def return_csv_data():
     names=pd.read_csv('./db/Final_2019_data.csv')
