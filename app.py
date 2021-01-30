@@ -19,16 +19,9 @@ engine=create_engine(db_path)
 
 
 
-@app.route("/")
-def welcome():
-    return (
-        f"Welcome!<br/>"
-        f"Available Routes:<br/>"
-        f"/api/v1.0/csv/read<br/>"
-        f"/api/v1.0/csv/read2<br/>"
-        f"/api/v1.0/tables"
-    )
-
+@app.route('/')
+def render_indexjf():
+    return render_template('/indexjf.html')
 
 @app.route('/csv/read')
 def return_csv_data():
@@ -40,9 +33,7 @@ def return_csv_data2():
     names=pd.read_csv('./db/Final_2020_data.csv')
     return jsonify(names.to_dict())
 
-@app.route('/tables')
-def render_indexjf():
-    return render_template('/indexjf.html')
+
 
 ############Diana's Code########################
 
